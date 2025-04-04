@@ -6,6 +6,13 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>PER ORA FUNZIONA TUTTO</h1>
+    <h1>LA TUA LISTA DELLA SPESA</h1>
+    {% if lista%}
+        {% for elemento in lista %}
+            <li>{{elemento}}</li>
+        {% endfor %}
+    {% else %}
+        <p>la lista è vuota</p>
+    {% endif %}
 </body>
 </html>
