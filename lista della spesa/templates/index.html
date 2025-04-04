@@ -4,13 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 
 <body>
     <h1>La tua Lista della Spesa</h1>
     {% if lista %}
-        <ul>
+        <ol>
         {% for elemento in lista %}
             <li>
             {{ elemento }}
@@ -20,7 +21,7 @@
             </form>
             </li>
         {% endfor %}
-        </ul>
+        </ol>
     {% else %}
         <p>La lista è vuota.</p>
     {% endif %}
@@ -29,6 +30,12 @@
     <input type="text" name="elemento" placeholder="Aggiungi un elemento" required>
     <button type="submit">Aggiungi</button>
     </form>
+    <br/>
+    <form action="/rimuovi_tutto" method="post" style="display:inline;">
+    <button type="submit">rimuovi tutto</button>
     </body>
+
+
+
 
 </html>

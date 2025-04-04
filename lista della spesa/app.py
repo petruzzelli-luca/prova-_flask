@@ -22,6 +22,11 @@ def rimuovi(indice):
         lista.pop(indice)
     return redirect(url_for('home'))
 
+@app.route('/rimuovi_tutto', methods=['POST'])
+def rimuovi_tutto():
+    lista.clear()
+    return redirect(url_for('home'))
+
 
 #avvio flask
 if __name__ == '__main__':
